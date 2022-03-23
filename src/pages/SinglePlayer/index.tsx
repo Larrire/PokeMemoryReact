@@ -5,7 +5,7 @@ import { SinglePlayerHeader } from "../../components/GameHeader/SinglePlayer";
 import { getRandomIds, getPokemonsByIdsArray } from "../../helpers/pokemons";
 
 export const SinglePlayer = () => {
-  const randomPokemonsRange = 20;
+  const randomPokemonsRange = 151;
   const totalPokemons = 15;
   const [pokemonsArray, setPokemonsArray] = useState<Object[]>([]);
 
