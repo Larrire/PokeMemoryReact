@@ -6,7 +6,6 @@ export async function getPokemonsByIdsArray(pokemonsIds:number[]) {
 
   while( count < pokemonsIds.length ){
     const newPokemon = await getPokemonById(pokemonsIds[count]);
-    console.log(newPokemon)
     newPokemon && pokemonsArray.push(newPokemon, newPokemon) && count++;
 
     if( pokemonsArray.length === pokemonsIds.length ) break;
