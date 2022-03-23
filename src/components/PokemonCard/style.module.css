@@ -1,0 +1,22 @@
+.pokemonCardFront, .pokemonCardBack {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+  background-color: #fff;
+  border-radius: inherit;
+}
+
+.pokemonCard--hidden {
+  visibility: hidden;
+}
+
+.pokemonCardInner--active {
+  transform: rotateY(180deg);
+  box-shadow: 0 0 20px rgba(0, 149, 255, 0.836);
+}
