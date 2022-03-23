@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import * as Component from './styles';
 import { PokemonCard } from "../../components/PokemonCard";
 import { SinglePlayerHeader } from "../../components/GameHeader/SinglePlayer";
-import { getRandomIds, getPokemonsByIdsArray } from "../../helpers/pokemon";
+import { getRandomIds, getPokemonsByIdsArray } from "../../helpers/pokemons";
 
 export const SinglePlayer = () => {
   const randomPokemonsRange = 20;
