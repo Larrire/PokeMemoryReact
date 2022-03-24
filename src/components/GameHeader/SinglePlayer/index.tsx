@@ -1,16 +1,10 @@
 import React, { useEffect, useState } from "react";
 import * as Component from './styles';
-
+import { useAppSelector } from "../../../redux/hooks/useAppSelectores";
 
 export const SinglePlayerHeader = () => {
-  const [timeValue, setTimeValue] = useState(0);
-  let interval;
 
-  function startTimer() {
-    interval = setInterval(() => {
-      setTimeValue(timeValue => timeValue + 1)
-    }, 1000)
-  }
+  const { timer } = useAppSelector( state => state.singlePlayer );
 
   function convertHMS(value:string) {
     const sec = parseInt(value, 10); // convert value to number if it's string
@@ -28,13 +22,9 @@ export const SinglePlayerHeader = () => {
     return stringMinutes + ':' + stringSeconds; // Return is HH : MM : SS
   }
 
-  useEffect(() => {
-    startTimer();
-  }, [])
-
   return <Component.Container>
     <Component.TimerContainer>
-      {convertHMS(timeValue.toString())}
+      {convertHMS(timer.toString())}
     </Component.TimerContainer>
   </Component.Container>
 }

@@ -32,7 +32,7 @@ export const PokemonCardBack = styled.section`
   border-radius: inherit;
 `;
 
-export const pokemonCardTitle = styled.p`
+export const PokemonCardTitle = styled.p`
   font-size: 18px;
   font-family: PokemonFont;
   -webkit-text-stroke: 1px rgb(52, 72, 175);

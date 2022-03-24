@@ -1,9 +1,7 @@
 import styled from 'styled-components'
-import { secondaryBlue } from '../../../styles/variables';
 
 export const Container = styled.section`
-  background-color: #fefefe;
-  background: red;
+  background-color: red;
   box-shadow: 0 0 5px rgba(0,0,0, 0.2);
   padding: 16px;
   `;

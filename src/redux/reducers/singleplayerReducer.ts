@@ -3,17 +3,15 @@ import { createSlice } from '@reduxjs/toolkit'
 export const slice = createSlice({
   name: 'singleplayer',
   initialState: {
-    totalPokemons: 15,
+    totalPokemons: 2,
+    timer: 0,
     totalClicksCurrentPlay: 0,
     totalFoundPairs: 0,
+    pokemonsArray: [],
     firstSelection: {
-      pokemon: null,
-      card: null
+      pokemon: 0.1,
+      card: 0.1,
     },
-    secondSelection: {
-      pokemon: null,
-      card: null
-    }
   },
   reducers: {
     setTotalClicksCurrentPlay: ( state, action ) => {
@@ -22,11 +20,14 @@ export const slice = createSlice({
     setTotalFoundPairs: ( state, action ) => {
       state.totalFoundPairs = action.payload
     },
+    setPokemonsArray: ( state, action ) => {
+      state.pokemonsArray = action.payload
+    },
     setFirstSelection: ( state, action ) => {
       state.firstSelection = action.payload
     },
-    setSecondSelection: ( state, action ) => {
-      state.secondSelection = action.payload
+    setTimer: ( state, action ) => {
+      state.timer = action.payload
     },
   }
 });
@@ -34,7 +35,8 @@ export const slice = createSlice({
 export const {
   setTotalClicksCurrentPlay,
   setTotalFoundPairs,
+  setPokemonsArray,
   setFirstSelection,
-  setSecondSelection
+  setTimer
 } = slice.actions
 export default slice.reducer;
